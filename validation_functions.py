@@ -1,13 +1,15 @@
 def validate_equation(equation):
     # input validation:
 
-    if equation.count("=") > 1:
+    eq = equation
+
+    if eq.count("=") > 1:
         return ('''"=" Must be only once in input!\n\n\n''')
-        quit()
+
 
     # -------------- validation of y--------------------
 
-    y_and_equation_list = equation.split("=")
+    y_and_equation_list = eq.split("=")
 
     # ["y", "<equation>"]
 
@@ -15,7 +17,7 @@ def validate_equation(equation):
 
     if should_be_y != "y":
         return '''Equation must be given in "y = ..." form only!\n'''
-        quit()
+
 
     # -----------------------validation of equation--------------------------
 
@@ -50,4 +52,3 @@ def validate_x(x):
         if i not in nums:
             return '''X must be a real integer!'''
     return True
-

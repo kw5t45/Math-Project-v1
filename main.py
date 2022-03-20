@@ -1,7 +1,10 @@
 from validation_functions import validate_equation, validate_x
+from trigonometry_functions import replace_trigonometry
+import math
+
 
 print('''\nMath project v1 takes an equation as input and a given real integer "x" and returns x's value according to 
-the given equation. Accepted operators in equation are: "+", "-", "^", "*", "/", "sin","cos", "tan", "costan", "log", 
+the given equation. Accepted operators in equation are: "+", "-", "^", "*", "/", "sin","cos", "tan", "log", 
 and "ln". "π" and "e" are also accepted.\n''')
 
 equation = input('''Give equation in "y = ..." form: ''')
@@ -24,4 +27,14 @@ input_list = equation.split("=")  # getting equation from input
 equation = input_list[1]
 
 x = int(x)
-print(eval(equation))
+
+
+
+
+equation = replace_trigonometry(equation, x)
+
+try:
+    print("For x = {x}, y is equal to: " + str(eval(equation)))
+except ZeroDivisionError:
+    print("Error: Division by zero!")
+    quit()
