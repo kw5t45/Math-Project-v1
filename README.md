@@ -5,7 +5,7 @@ Math Project v1 is a project which takes a mathematic function in
 y = (equation) form and an x integer,
 and returns y according to function.
 
-Featuring:<br>
+<h4>Featuring</h4>:<br>
   Trigonometry<br>
   Input validation (Beta)<br>
   π and e numbers<br>
