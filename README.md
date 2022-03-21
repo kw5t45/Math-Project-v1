@@ -9,7 +9,7 @@ and returns y according to function.
   Trigonometry<br>
   Input validation (Beta)<br>
   π and e numbers<br>
-  exponential equations (Beta)<br>
+  Exponential equations (Beta)<br>
   Logarithmic equations<br>
  
 
