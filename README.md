@@ -6,10 +6,10 @@ y = (equation) form and an x integer,
 and returns y according to function.
 
 Featuring:<br>
-  Trigonometry
-  Input validation (Beta)
-  π and e numbers
-  exponential equations (Beta)
-  Logarithmic equations
+  Trigonometry<br>
+  Input validation (Beta)<br>
+  π and e numbers<br>
+  exponential equations (Beta)<br>
+  Logarithmic equations<br>
  
 
