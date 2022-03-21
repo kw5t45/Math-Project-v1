@@ -4,6 +4,8 @@ import math
 # sin cos tan log ln
 def replace_trigonometry(equation, x):
     # let eq be    x ^ 2 + sinx - sin5
+    equation = equation.replace("x", str(x)) # replacing x in equation with users input
+    # of x / with second argument in function
     if "sin" in equation:
         for index, value in enumerate(equation):
             if value == "i":  # since letter "i" is only found in "sin" operation,

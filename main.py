@@ -1,40 +1,37 @@
 from validation_functions import validate_equation, validate_x
 from trigonometry_functions import replace_trigonometry
+from pie_and_e_replacement import replace_pie_and_e
 import math
 
-
 print('''\nMath project v1 takes an equation as input and a given real integer "x" and returns x's value according to 
-the given equation. Accepted operators in equation are: "+", "-", "^", "*", "/", "sin","cos", "tan", "log", 
+the given equation. Accepted operators in equation are: "+", "-", "^", "*", "/", "sin", "cos", "tan", "log", 
 and "ln". "π" and "e" are also accepted.\n''')
 
 equation = input('''Give equation in "y = ..." form: ''')
 x = input('''Give "x": ''')
 print('''\n''')
 
-
-if validate_equation(equation) != True:  # validate_equation function returns True if validation check is passed.
+if not validate_equation(equation):  # validate_equation function returns True if validation check is passed.
     print(validate_equation(equation))
     quit()
-if validate_x(x) != True:
+
+if not validate_x(x):  # --//--
     print(validate_x(x))
     quit()
 
 if "^" in equation:
     equation = equation.replace("^", "**")
 
-
 input_list = equation.split("=")  # getting equation from input
 equation = input_list[1]
 
 x = int(x)
 
-
-
-
 equation = replace_trigonometry(equation, x)
+equation = replace_pie_and_e(equation)
 
 try:
-    print("For x = {x}, y is equal to: " + str(eval(equation)))
+    print(f"For x = {x}, y is equal to: " + str(eval(equation)))
 except ZeroDivisionError:
     print("Error: Division by zero!")
     quit()

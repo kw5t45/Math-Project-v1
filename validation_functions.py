@@ -28,7 +28,6 @@ def validate_equation(equation):
     should_be_equation = should_be_equation.replace("sin", "")
     should_be_equation = should_be_equation.replace("cos", "")
     should_be_equation = should_be_equation.replace("tan", "")
-    should_be_equation = should_be_equation.replace("costan", "")
     should_be_equation = should_be_equation.replace("log", "")
     should_be_equation = should_be_equation.replace("ln", "")
 
